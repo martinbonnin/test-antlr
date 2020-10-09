@@ -11,3 +11,7 @@ repositories {
 dependencies {
   antlr("org.antlr:antlr4:4.8-1")
 }
+
+tasks.named("compileKotlin") {
+  dependsOn("generateGrammarSource")
+}
